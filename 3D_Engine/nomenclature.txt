@@ -1,0 +1,16 @@
+FONCTION:
+variable : variableExemple
+pointeur : pPointeurExemple
+vector / vector de pointeur : vVectorMembre
+
+fonction : FonctionExemple
+
+
+CLASS:
+variable membre : m_variableExemple
+pointeur membre : mp_pointeurMembre
+
+vector membre : mv_vectorMembre
+pointeur vector membre (vector<TEXT>*) : mvp_vectorMembre
+map membre : mm_mapMembre
+array membre : ma_arrayMembre
