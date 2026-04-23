@@ -19,7 +19,6 @@ void Camera::UpdateView(Transform* transform)
 {
     if (m_dirtyView == true)
     {
-        //TODO
         XMVECTOR _right = XMLoadFloat3(&transform->m_right);
         XMVECTOR _up = XMLoadFloat3(&transform->m_up);
         XMVECTOR _forw = XMLoadFloat3(&transform->m_forward);
@@ -71,10 +70,7 @@ void Camera::SetLens(float _fov, float _aspect, float _near, float _far)
 }
 
 void Camera::Walk(Transform* transform, float _dist)
-{
-    //en gros m_pos += _dist*m_forward
-    //t'avance quoi...
-    
+{    
     XMVECTOR _distV = XMVectorReplicate(_dist);
     XMVECTOR _for = XMLoadFloat3(&transform->m_forward);
     XMVECTOR _pos = XMLoadFloat3(&transform->m_localPosition);
@@ -151,7 +147,7 @@ float Camera::GetFOV()
 
 XMFLOAT4X4 Camera::GetView()
 {
-    assert(!m_dirtyView);//if(expr) error
+    assert(!m_dirtyView);
     return m_view;
 }
 
